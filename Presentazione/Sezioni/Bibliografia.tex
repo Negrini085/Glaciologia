@@ -1,0 +1,45 @@
+\documentclass[12pt, a4paper]{report}
+\usepackage{caption, subcaption}
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+\usepackage[T1]{fontenc}
+\pdfminorversion=4
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{etoolbox}
+\usepackage{colortbl}
+\usepackage{csquotes}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage{float}
+
+
+\newenvironment{acknowledgements}%
+{\section*{Ringraziamenti}\leftskip=1em}%
+{\par\addcontentsline{toc}{chapter}{Ringraziamenti}}
+
+\usepackage[backend=biber, style=authoryear]{biblatex}
+\addbibresource{../bibliografia.bib}
+
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+
+\renewcommand*{\nameyeardelim}{\addspace}
+\renewcommand*{\postnotedelim}{\addcolon\space}
+\renewcommand*{\finentrypunct}{)}
+\renewcommand{\chaptername}{Capitolo}
+
+
+\begin{document}
+
+Cito \cite{GLAMOS22}, \cite{GLAMOS23}, \cite{STAT2018}, \cite{Oerlemans2000}, \cite{Oerlemans2009}
+
+\newpage
+\setlength{\bibitemsep}{\baselineskip}
+\printbibliography[heading = bibintoc, title=Bibliografia]
+\end{document}
+
+
